@@ -10,7 +10,7 @@ ENV TERM=xterm \
     LANG=C.UTF-8 \
     LANGUAGE=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    TIMEZONE=America/Denver
+    TIMEZONE=Europe/Paris
 
 ENV NODE_VERSION=v7.7.4 \
     NODE_PREFIX=/usr/local
@@ -37,7 +37,17 @@ RUN set -x \
         shadow \
         subversion \
         sudo \
-        tar
+        tar \
+        bash \
+        lcms2-dev \
+        libpng-dev \
+        gcc \
+        g++ \
+        make \
+        autoconf \
+        automake \
+        libtool \
+        nasm
 
 ##############################################################################
 # Install Node & NPM

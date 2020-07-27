@@ -1,18 +1,18 @@
 FROM node:11-stretch
 
 LABEL org.label-schema.schema-version = 1.0.0 \
-    org.label-schema.vendor = mkenney@webbedlam.com \
-    org.label-schema.vcs-url = https://github.com/mkenney/docker-npm \
+    org.label-schema.vendor = virgile@zol.fr \
+    org.label-schema.vcs-url = https://github.com/VirgileZol/docker-npm \
     org.label-schema.description = "This image provides node based build tools." \
     org.label-schema.name = "NPM" \
-    org.label-schema.url = http://mkenney.github.io/docker-npm/
+    org.label-schema.url = https://github.com/VirgileZol/docker-npm
 
 ENV TERM=xterm \
     NLS_LANG=American_America.AL32UTF8 \
     LANG=C.UTF-8 \
     LANGUAGE=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    TIMEZONE=America/Denver
+    TIMEZONE=Europe/Paris
 
 RUN set -x \
     && apt-get -qq update \
@@ -29,7 +29,17 @@ RUN set -x \
         rsync \
         subversion \
         sudo \
-        wget \
+        wget  \
+        bash \
+        lcms2-dev \
+        libpng-dev \
+        gcc \
+        g++ \
+        make \
+        autoconf \
+        automake \
+        libtool \
+        nasm \
     # Restore a borne-shell compatible default shell
     && rm /bin/sh \
     && ln -s /bin/bash /bin/sh
