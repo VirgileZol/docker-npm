@@ -8,7 +8,7 @@ fi
 DEFAULT_IMAGE_NAME=mkenney/npm
 IMAGE_NAME=${DOCKER_NPM_IMAGE_NAME-$DEFAULT_IMAGE_NAME}
 
-TAG=node-12-alpine
+TAG=node-10-alpine
 if [ "" != "$DOCKER_NPM_TAG" ]; then
     TAG="$DOCKER_NPM_TAG"
 fi

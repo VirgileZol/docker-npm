@@ -1,7 +1,6 @@
 # npm and related build and dev tools
 
-[![MIT License](https://img.shields.io/github/license/mkenney/k8s-proxy.svg)](https://github.com/VirgileZol/docker-npm/blob/master/LICENSE) [![stability-mature](https://img.shields.io/badge/stability-mature-008000.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#mature) [![Build status](https://travis-ci.org/mkenney/docker-npm.svg?branch=master)](https://travis-ci.org/mkenney/docker-npm) [![Github issues](https://img.shields.io/github/issues-raw/mkenney/docker-npm.svg)](https://github.com/VirgileZol/docker-npm/issues) [![Github pull requests](https://img.shields.io/github/issues-pr/mkenney/docker-npm.svg)](https://github.com/VirgileZol/docker-npm/pulls)
-
+Fork of https://github.com/mkenney/docker-npm and fork of https://github.com/fernandoacorreia/docker-npm
 Please feel free to [create an issue](https://github.com/VirgileZol/docker-npm/issues) or [open a pull request](https://github.com/VirgileZol/docker-npm/pull/new/master) if you need support or would like to contribute.
 
 ## Portable `node`, package managers and build tools
@@ -14,12 +13,9 @@ Please feel free to [create an issue](https://github.com/VirgileZol/docker-npm/i
 
 ## Announcements
 
-### v1.1.0 released
+2020-07-27
 
-2019-02-25
-
-* Added `node` v11 images and tests
-* Updated the shell scripts to default to `node-11-alpine` image (you can always use the `DOCKER_NPM_TAG` variable to use another image).
+* add node v12 and v14, remove node < 8
 
 ## Tagged Images
 
@@ -31,33 +27,14 @@ Images are tagged according to the installed Node version and operating system. 
 
 Based on [`node:alpine`](https://hub.docker.com/_/node/). This image should be considered under development and may not be as stable as versioned images.
 
-#### [`node-12-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-12-alpine/Dockerfile)
+#### [`node-14-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-14-alpine/Dockerfile)
 
-Based on [`node:12-alpine`](https://hub.docker.com/r/library/node/tags/12-alpine/).
+Based on [`node:14-alpine`](https://hub.docker.com/r/library/node/tags/14-alpine/).
 
-#### [`node-11-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-11-alpine/Dockerfile)
-
-Based on [`node:11-alpine`](https://hub.docker.com/r/library/node/tags/11-alpine/).
-
-#### [`node-10-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-10-alpine/Dockerfile)
-
-Based on [`node:10-alpine`](https://hub.docker.com/r/library/node/tags/10-alpine/).
-
-#### [`node-9-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-9-alpine/Dockerfile)
-
-Based on [`node:9-alpine`](https://hub.docker.com/r/library/node/tags/9-alpine/).
+...
 
 #### [`node-8-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-8-alpine/Dockerfile)
 
-Based on [`node:8-alpine`](https://hub.docker.com/r/library/node/tags/8-alpine/).
-
-#### [`node-7-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-7-alpine/Dockerfile)
-
-Based on [`node:7-alpine`](https://hub.docker.com/r/library/node/tags/7-alpine/).
-
-#### [`node-6-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-6-alpine/Dockerfile)
-
-Based on [`node:6-alpine`](https://hub.docker.com/r/library/node/tags/6-alpine/).
 
 ### Debian
 
@@ -65,47 +42,14 @@ Based on [`node:6-alpine`](https://hub.docker.com/r/library/node/tags/6-alpine/)
 
 Based on [`node:latest`](https://hub.docker.com/r/library/node/tags/latest/). This image should be considered under development and may not be as stable as versioned images.
 
-#### [`node-12-debian` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-12-debian/Dockerfile)
+#### [`node-14-debian` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-14-debian/Dockerfile)
 
 Based on [`node:12-stretch`](https://hub.docker.com/r/library/node/tags/12-stretch/).
 
-#### [`node-11-debian` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-11-debian/Dockerfile)
-
-Based on [`node:11-stretch`](https://hub.docker.com/r/library/node/tags/11-stretch/).
-
-#### [`node-10-debian` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-10-debian/Dockerfile)
-
-Based on [`node:10-wheezy`](https://hub.docker.com/r/library/node/tags/10-wheezy/).
-
-#### [`node-9-debian` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-9-debian/Dockerfile)
-
-Based on [`node:9-wheezy`](https://hub.docker.com/r/library/node/tags/9-wheezy/).
+...
 
 #### [`node-8-debian` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-8-debian/Dockerfile)
 
-Based on [`node:8-wheezy`](https://hub.docker.com/r/library/node/tags/8-wheezy/).
-
-#### [`node-7-debian` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-7-debian/Dockerfile)
-
-Based on[`node:7-wheezy`](https://hub.docker.com/r/library/node/tags/7-wheezy/).
-
-### Other Images
-
-#### [`node-7.7-alpine`, `7.0-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-7.7-alpine/Dockerfile)
-
-[![stability-locked](https://img.shields.io/badge/stability-locked-4b0088.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#locked) Based on [`node:7.7-alpine`](https://hub.docker.com/r/library/node/tags/7-alpine/), it  `node` v7.7 compiled from source. The `7.0-alpine` tagged version was accidentally upgraded over time to v7.7 and will remain so for the stability of existing users.
-
-#### [`node-6.9-alpine`, `6.9-alpine` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-6.9-alpine/Dockerfile)
-
-[![stability-locked](https://img.shields.io/badge/stability-locked-4b0088.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#locked) Based on [`alpine:3.4`](https://hub.docker.com/r/library/alpine/tags/3.4/) with `node` v6.9 compiled from source.
-
-#### [`node-7.0-debian`, `7.0-debian` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-7.0-debian/Dockerfile)
-
-[![stability-locked](https://img.shields.io/badge/stability-locked-4b0088.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#locked) Based on[`node:7.0-wheezy`](https://hub.docker.com/r/library/node/tags/7.0-wheezy/).
-
-#### [`node-6.9-debian`, `6.9-debian` Dockerfile](https://github.com/VirgileZol/docker-npm/blob/master/node-6.9-debian/Dockerfile)
-
-[![stability-locked](https://img.shields.io/badge/stability-locked-4b0088.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#locked) Based on[`node:6.9-wheezy`](https://hub.docker.com/r/library/node/tags/6.9-wheezy/).
 
 ## About
 
@@ -152,12 +96,12 @@ The included [wrapper scripts](https://github.com/VirgileZol/docker-npm/blob/mas
 
 To specify a different image, you can define the image tag in your environment which will set a new default (you probably want to define this in your `.bashrc` or similar profile script):
 ```txt
-export DOCKER_NPM_TAG=node-6.9-alpine
+export DOCKER_NPM_TAG=node-14-alpine
 ```
 
 or you can easily specify it at runtime whenever necessary, for example:
 ```txt
-$ DOCKER_NPM_TAG=node-6.9-alpine bower install
+$ DOCKER_NPM_TAG=node-14-alpine bower install
 ```
 
 If you would to see like additional node modules and/or wrapper scripts added to this project please feel free to [create an issue](https://github.com/VirgileZol/docker-npm/issues) or [open a pull request](https://github.com/VirgileZol/docker-npm/pull/new/master).
@@ -192,8 +136,8 @@ Options
   PREFIX   - Optional, the location to install the command script. Default '$HOME/bin'
 
 Examples
-  $ curl -L https://raw.githubusercontent.com/mkenney/docker-npm/master/bin/install.sh | bash -s gulp node-10-alpine $HOME/bin
-  $ bash ./install.sh gulp node-10-alpine $HOME/bin
+  $ curl -L https://raw.githubusercontent.com/mkenney/docker-npm/master/bin/install.sh | bash -s gulp node-14-alpine $HOME/bin
+  $ bash ./install.sh gulp node-14-alpine $HOME/bin
 ```
 
 ##### Updating
@@ -201,3 +145,4 @@ Examples
 * `[command] self-update`
 
   Each of the scripts have a `self-update` command which pulls down the latest docker image (which all the scripts share) and then updates the shell script itself. If you don't have write permissions on the shell script you'll get a permissions error, you can run the self-update command with `sudo` if necessary.
+
