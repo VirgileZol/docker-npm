@@ -6,7 +6,7 @@ LABEL version="1.0.0" \
       description="Node v7.7 compiled from source running on Alpine v3.4"
 
 ENV TERM=xterm \
-    NLS_LANG=American_America.AL32UTF8 \
+    NLS_LANG=FRENCH_FRANCE.UTF8 \
     LANG=C.UTF-8 \
     LANGUAGE=C.UTF-8 \
     LC_ALL=C.UTF-8 \

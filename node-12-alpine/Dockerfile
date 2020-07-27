@@ -8,7 +8,7 @@ LABEL org.label-schema.schema-version = 1.0.0 \
     org.label-schema.url = https://github.com/VirgileZol/docker-npm
 
 ENV TERM=xterm \
-    NLS_LANG=American_America.AL32UTF8 \
+    NLS_LANG=FRENCH_FRANCE.UTF8 \
     LANG=C.UTF-8 \
     LANGUAGE=C.UTF-8 \
     LC_ALL=C.UTF-8 \
@@ -49,7 +49,6 @@ RUN set -x \
         grunt-cli \
         bower \
         markdown-styles \
-        npx \
     # Configure root account
     && echo "export NLS_LANG=$(echo $NLS_LANG)"                >> /root/.profile \
     && echo "export LANG=$(echo $LANG)"                        >> /root/.profile \
